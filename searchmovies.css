@@ -1,0 +1,521 @@
+
+
+/* Navigation CSS */
+#myNav
+{
+  width: 100%; /* Set to 100% of container width */
+  min-width: 100%; /* Minimum width 100% */
+  display:flex; /* Flexible layout option for child element */ 
+  justify-content: center; /* Aligns child elements horizontally at the center of element */
+}
+
+#customNav 
+{
+  z-index: 1; /* Sets #customNav to top */
+}
+
+html, body /* Sets style properties for HTML & body */
+{
+  height:100%; /* HTML & Body take full height of browser window */
+  min-height:100%; /* Sets minimum height to 100% */
+  font-family: 'Roboto'; /* Sets font to Roboto */
+}
+
+#myNav /* More specific setting for #myNav when using <body> */
+{
+  width: 100%;
+}
+body /* Set body to dark green color */
+{
+  background-color: rgb(16, 27, 21);
+  margin:0; /* Set body to dark green color */
+}
+
+.nav-link, .navbar-brand, #myNav /* Sets text color and BG color */
+{
+  color:rgb(196, 239, 215);
+  background-color:rgb(7, 12, 9);
+}
+
+.navbar-brand /* Text & Font specifications */
+{
+  color:white; 
+  font-family: 'Roboto';
+  font-weight: bold;
+  
+}
+
+/* change navbar-toggler inside lines color (stroke) */
+/* Settings for hamburger icon when screen is smaller (??) */
+.navbar span.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='yellow' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  color: white;
+}
+
+/* change hamburger button border color */
+.navbar button.navbar-toggler {
+  border-color: white;
+}
+
+/* Search bar size settings */
+.searchBar {
+  width: 25%; /* Set to 25% of containder width */
+  display: flex; /* Flexible layout option for child element */ 
+  flex-direction: row; /* Element arranged from left to right (??) */ 
+  align-items: center; /* Child elements aligned in center */ 
+}
+
+#searchQueryInput {
+  width: 100%; /* Container Width */ 
+  height: 1.8rem; /* Set height of this element to font size of root element */ 
+  background-color: rgba(123, 144, 132, 0.3);; /* BG color of element */
+  outline: none; /* Remove border of element */
+  border: none; /* Remove border of element */
+  border-radius: 1.625rem; /* Round corner */
+  color: rgb(103, 128, 115); /* Set text color */
+  padding: 0 3.5rem 0 1.5rem; /* Space between elements */
+  font-size: 0.9rem; /* Sets font size to smaller than root element */
+  transition: 0.3s; /* Transition element */
+}
+
+/* Style for submit button maybe?? */
+#searchQuerySubmit { 
+  width: 3.5rem; /* scale width to root element */
+  height: 2.8rem; /* scale height to root element */
+  margin-left: -3.5rem; /* Helps align button to right no matter searchbar size maybe? */
+  background: none; 
+  border: white;; /* Custom border for submit button I think (??) */
+  outline: none; /* Removes border when search is focused */
+}
+
+/* Change mouse to pointer on hover */
+#searchQuerySubmit:hover {
+  cursor: pointer;
+}
+
+/* Sets color for text in placeholder text - The text for input stuff on form */
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(196, 239, 215);
+  opacity: 1; /* Firefox */
+}
+
+/* Sets color for text in placeholder text - The text for input stuff on form */
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: rgb(196, 239, 215);
+}
+
+/* Sets color for text in placeholder text - The text for input stuff on form */
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: rgb(196, 239, 215);
+}
+
+/* When user hovers over search bar, change BG color*/
+#searchQueryInput:hover {
+  background-color: rgba(225, 247, 235, 0.8);;
+}
+
+/* Change color for link in Navigation */
+.nav-link:hover {
+  color:yellow;
+}
+
+/* Change color on hover */
+.navbar-brand:hover {
+  color:white;
+}
+
+/* Change color on click - As being clicked */
+.nav-link:active {
+  color:yellow;
+}
+
+/* Set logo size */
+#brandlog {
+  width: 23px;
+  height: 23px;
+}
+
+/* Give a little transitional delay / flair */
+.nav-link 
+{
+  transition: 0.3s;
+}
+
+#homeImage
+{
+  background: url("/images/babylon-090822-4-98e504eb5b3445218631e509753f955c.jpg") left top no-repeat;
+  box-shadow: 120px 120px 130px 0px rgb(16, 27, 21) inset, -120px -120px 130px 0 rgb(16, 27, 21) inset; ;
+  background-size:100%; /* Set image to 100%  */
+  width:1000px; /* Set size for image  */
+  height:400px; /* Set size for image  */
+  top: -30px; /* Shift image up */
+  position:relative; /* Child elements relative to homeImage setting */
+  margin:0 auto; 
+  display:flex; /* Center within containing element */
+  align-items: center; /* Center within containing element */
+  justify-content: center; /* Center within containing element */
+}
+
+
+/* Text on top of homeImage I think (??)  */
+.homeText
+{
+  color: white;
+  position: absolute; /* Works with #homeImage I think (??) */
+  top: 340px; /* Position text */
+  text-align:center; /* Position text */
+  font-size: 1.9rem;
+
+}
+
+/* Aligns button to to specific location  */
+#regButt
+{
+
+  position:absolute;
+  top: 490px;
+}
+
+.recentMovs
+{
+  display:flex; /* Layout option for child element  */
+  flex-direction: row; /* Child element in row */
+  width:1100px; /* Fixed width */
+  height:50px; /* Fixed height */
+  position:relative; 
+  justify-content: center; /* Center child elements */
+  top:150px; /* Shift down by 150 px */
+
+}
+
+.mov1, .mov2, .mov3, .mov4, .mov5
+{
+  border-style: inset; /* 3D effect */
+  border-radius:5px; /* Round corner */
+  border-color:rgb(187, 241, 212, 0.4); /* Border color */
+  border-top-color:rgb(170, 255, 227); /* Border color for top line */
+  border-width:1.5px; 
+  max-width: 135px; /* Set fixed width */
+  height: 200px; /* Set fixed height */
+  flex: 1 1 auto; /* Flex property of element (??) */
+  margin: 5px; /* Margin between elements */
+  align-items: center; /* Center child elements vertically ????? */
+  justify-content: center; /* Center child elements horizontally ???? */
+  background: none; /* Transparent BG */
+}
+
+.homeMovies
+{
+  border-radius: 5px; /* Round corner */
+  width: 100%; /* Occupy 100% of container space */
+  height: 100%; /* Occupy 100% of container space */
+}
+
+.button-18 {
+  align-items: center; /* Center vertically  */
+  background-color: #13a813; /* Set BGG color */
+  border: 0; /* No Border */
+  border-radius: 100px; /* Round corner of button */
+  box-sizing: border-box; 
+  color: #ffffff; /* Text color */
+  cursor: pointer; /* On hover over button, set to clicky thing */
+  display: inline-flex; /* Flexible layout properties (??) */
+
+  /* Font options & fallback font options */
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;  /* Font size */
+  font-weight: 600; /* Make text bold */
+  justify-content: center; /* Center child elements (??) */
+  line-height: 20px; /* Space between text */
+  max-width: 480px; /* Max width of button element */
+  min-height: 40px; /* Max height of button element */
+  min-width: 0px; 
+  overflow: hidden; /* Hides context that goes past bounds */
+  padding: 0px; /* Space between element */
+  padding-left: 20px; /* Space between element */
+  padding-right: 20px; /* Space between element */
+  text-align: center; /* Center text in button */
+  touch-action: manipulation; /* Responsive for mobile */
+
+  /* Make transitional effect */
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;   /* No text selection */
+  -webkit-user-select: none;   /* No text selection */
+  vertical-align: middle; /* Center element in container */
+}
+
+/* Change button color on hover */
+.button-18:hover,
+.button-18:focus { 
+  background-color: #0d7a0d;
+  color: #ffffff;
+}
+
+/* Change button color when clicked */
+.button-18:active {
+  background: #09223b;
+  color: rgb(255, 255, 255, .7);
+}
+
+/* Style setting for when button is disabled (??) */
+.button-18:disabled { 
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, .08);
+  color: rgba(0, 0, 0, .3);
+}
+
+
+.reviews {
+  background-color: none; /* Transparent BG */
+  width: 725px; 
+  height: 800px;
+  display:flex; /* Transparent BG */
+  position: relative;
+  justify-content: center; /* Center horizontally */
+  margin: 0 auto; /* Center horizontally within parent element */
+  align-items: center; /* Center vertically */
+  align-self: center; /* Center vertically within parent element */
+  top: 360px; /* Distance from top */
+}
+
+/* Sets parameters for userReviews */
+.userReviews {
+  background-color: none;
+  width: 725px;
+  height: 140px;
+  position: absolute;
+  display: inline-flex;
+  top: 30px;
+  z-index: 1;
+}
+
+/* Sets color for review header and adjusts parameters */
+.reviewHeader {
+  display: flex;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color:rgb(154, 223, 200);
+  z-index: 1;
+}
+
+/* Adds border and adjusts position */
+.hrLine {
+  border-top: 1px solid rgb(173, 223, 207);
+  display: flex;
+  width: 100%;
+  top: 5px;
+  position: absolute;
+  
+}
+
+/* Adds border and adjusts position */
+.hrLine2 {
+  border-top: 1px solid rgb(173, 223, 207);
+  display: flex;
+  width: 100%;
+  top: 165px;
+  position: absolute;
+  
+}
+
+/* Styles box for every rated movie */
+.ratedMovie {
+  max-width: 58px;
+  height: 85.93px;
+  left: -5px;
+  border-style: inset;
+  border-radius:5px;
+  border-color:rgb(187, 241, 212, 0.4);
+  border-top-color:rgb(170, 255, 227);
+  display:inline-flex;
+  position: absolute;
+  border-width:1.5px;
+  margin: 5px;
+}
+
+/* Styles text for movie titles */
+.ratedMovieTitle {
+  display: flex;
+  position: absolute;
+  left: 75px;
+  top: 2px;
+  font-size: 1rem;
+  color:white;
+}
+
+/* Styles text year of movie */
+.ratedMovieYear {
+  display: flex;
+  position: absolute;
+  left: 135px;
+  top: 4px;
+  color:rgb(115, 148, 130);
+  font-weight:normal;
+  font-size: 0.9rem;
+}
+
+/* Styles user1 name */
+.user1 {
+  display: flex;
+  position: absolute;
+  left: 105px;
+  top: 33px;
+  color:rgb(168, 193, 179);
+  font-weight:normal;
+  font-size: 0.9rem;
+}
+
+/* Styles user1 review */
+.user1review {
+  display: flex;
+  position: absolute;
+  left: 75px;
+  top: 60px;
+  color:rgb(115, 148, 130);
+  font-weight:normal;
+  font-size: 0.9rem;
+
+}
+
+/* Sets parameter for user image */
+.user1pic {
+    position: absolute;
+    left: 75px;
+    top: 30px;
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+/* Sets style for stars in review */
+  .user1stars {
+    position: absolute;
+    left: 0px;
+    top: 90px;
+    height: 15px;
+    max-width: 100px;
+    color:#f1f902;
+    border-radius: 50%;
+    display: inline-block;
+
+  }
+
+/* Positions review container */
+.containerReview2 {
+  top: 190px;
+  position: absolute;
+  width: 100%;
+}
+
+/* Positions review container */
+.containerReview3 {
+  top: 380px;
+  position: absolute;
+  width: 100%;
+}
+
+/* Positions review container */
+.containerReview4 {
+  top: 570px;
+  position: absolute;
+  width: 100%;
+}
+
+/* Positions review container */
+.containerReview5 {
+  top: 760px;
+  position: absolute;
+  width: 100%;
+}
+
+/* Aligns footer and sets color */
+.footer {
+  background-color: rgb(37, 66, 48);
+  width:100%;
+  height: 5.5rem;
+  position: absolute;
+  margin: 0 auto;
+  bottom: 0;
+
+  align-items: center;
+}
+
+/* Aligns footer text */
+.footertext {
+  margin: 0 auto;
+  top: 10px;
+  width: 725px;
+}
+
+/* Style for footer */
+.footertitle {
+  color:rgb(170, 255, 227);
+  position: absolute;
+  align-self: center;
+  display: flex;
+
+}
+
+
+/* Style for movie results */
+
+.movie-item {
+  background-color: pink;
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px solid black;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Sets size of movie poster */
+/* Makes it so that movie poster is on right */
+.poster {
+  max-width: 200px;
+  max-height: 300px;
+  margin-right: 10px;
+}
+
+/* Makes movie-info a flexible container  */
+/* The > is for all direct child elements of movie-info */
+/* The * is to select all child elements regardless of tag name */
+/* Any elements within the movie-info class will have 10px margin */
+.movie-info {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Sets margin bottom of 10 pixels to all child elements */
+/* The > is for all direct child elements of movie-info */
+/* The * is to select all child elements regardless of tag name */
+/* Any elements within the movie-info class will have 10px margin */
+
+.movie-info > * {
+  margin-bottom: 10px;
+}
+
+/* The > is for all direct child elements of movie-info */
+/* h2 header within the movie-info class will have 0 margin */
+/* Changes all h2 parameters within movie-info*/
+
+.movie-info > h2 {
+  margin-bottom: 0;
+}
+
+/* Makes it so that the text changes/wraps to fit in space */
+.info-wrapper {
+  flex: 1;
+}
+
+/* Text in result ID will have flex container */
+/* Makes it so that the elements in the results wrap onto new lines */
+#results {
+  display: flex;
+  flex-wrap: wrap;
+}
