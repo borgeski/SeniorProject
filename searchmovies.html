@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <!-- Load React. -->
+         <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <style>
+          body {
+            font-family: 'Roboto'; font-size: 12px;
+          }
+        </style>
+            <script type="text/javascript" src="SearchFunctionFile2.js"></script>
+            <link rel="stylesheet" href="css.css">
+    </head>
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <div class="container" id="myNav">
+        <nav class="navbar navbar-expand-lg" id="customNav">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><img src="/images/logo6.png" alt="" width="30" height="24" id="brandlog" class="d-inline-block align-text-top">
+                CINE/SCORE</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">SIGN IN</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">CREATE ACCOUNT</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">FILMS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link">MEMBERS</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <form>
+                <input type="text" id="search" name="search" class="nav-link searchBar" placeholder="Search for movie...">
+                <button type="submit">Search</button>
+              </form>
+          </nav>
+          </div>
+
+          <section>
+          <!-- Outside Nav bar-->
+
+
+          <div id="results"></div>
+
+          <script>
+            const container = document.getElementById('results');
+          
+            async function handleSubmit(event) {
+              event.preventDefault();
+              const query = document.getElementById('search').value;
+              const results = await searchMovies(query);
+              container.innerHTML = results.map(movie => `
+                <div class="movie-item">
+                  <img src="${movie.posterUrl}" class="poster">
+                  <div class="movie-info">
+                    <div class="info-wrapper">
+                      <h2>${movie.title}</h2>
+                      <div class="movie-details">
+                        <div><span>Year:</span> ${movie.year}</div>
+                        <div><span>Genres:</span> ${movie.genres.join(', ')}</div>
+                        <div><span>Directors:</span> ${movie.directors.join(', ')}</div>
+                        <div><span>Actors:</span> ${movie.actors.join(', ')}</div>
+                        <div><span>Synopsis:</span> ${movie.synopsis}</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              `).join('');
+            }
+          
+            const form = document.querySelector('form');
+            form.addEventListener('submit', handleSubmit);
+          </script>
+            
+                </div>
+            </section>
+      
+              <section>
+              <div class="footer">
+                <div class="footertext">
+                  <span class="footertitle">CINE/SCORE</span>
+                </div>
+
+              </div>
+              </section>
+
+    </body>
+</html>
